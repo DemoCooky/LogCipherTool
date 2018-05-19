@@ -1,0 +1,689 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		50969E571FFB330C003CCE68 /* ByteAndInt.m in Sources */ = {isa = PBXBuildFile; fileRef = 50969E501FFB330C003CCE68 /* ByteAndInt.m */; };
+		50969E581FFB330C003CCE68 /* ProcessMsgPortCon.m in Sources */ = {isa = PBXBuildFile; fileRef = 50969E521FFB330C003CCE68 /* ProcessMsgPortCon.m */; };
+		50969E591FFB330C003CCE68 /* RC4Cipher.m in Sources */ = {isa = PBXBuildFile; fileRef = 50969E541FFB330C003CCE68 /* RC4Cipher.m */; };
+		50969E5A1FFB330C003CCE68 /* RegexHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 50969E561FFB330C003CCE68 /* RegexHelper.m */; };
+		50969E611FFB5D35003CCE68 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 50969E5C1FFB33BB003CCE68 /* libsqlite3.0.tbd */; };
+		8D3D3B52CD43820EBFC6B2BF /* libPods-LogCipherTool.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 08D57E65AB5914A0593D451F /* libPods-LogCipherTool.a */; };
+		D24005471A639A3A00CC6DF3 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = D240053D1A639A3A00CC6DF3 /* FMDatabase.m */; };
+		D24005481A639A3A00CC6DF3 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D240053F1A639A3A00CC6DF3 /* FMDatabaseAdditions.m */; };
+		D24005491A639A3A00CC6DF3 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = D24005411A639A3A00CC6DF3 /* FMDatabasePool.m */; };
+		D240054A1A639A3A00CC6DF3 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = D24005431A639A3A00CC6DF3 /* FMDatabaseQueue.m */; };
+		D240054B1A639A3A00CC6DF3 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = D24005461A639A3A00CC6DF3 /* FMResultSet.m */; };
+		D240054D1A63A49A00CC6DF3 /* app.icns in Resources */ = {isa = PBXBuildFile; fileRef = D240054C1A63A49A00CC6DF3 /* app.icns */; };
+		D27E85EF1A77A4BB0025235C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = D27E85EE1A77A4BB0025235C /* MainMenu.xib */; };
+		E104B8921A2C3D87008EAAC7 /* DatabaseHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E104B8911A2C3D87008EAAC7 /* DatabaseHelper.m */; };
+		E104B8EF1A2C4260008EAAC7 /* chatlog@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E104B8EE1A2C4260008EAAC7 /* chatlog@2x.png */; };
+		E104B8F61A2EF531008EAAC7 /* PopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E104B8F51A2EF531008EAAC7 /* PopViewController.m */; };
+		E104B8FA1A2EFCBA008EAAC7 /* LogConViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E104B8F81A2EFCBA008EAAC7 /* LogConViewController.m */; };
+		E104B8FB1A2EFCBA008EAAC7 /* LogConViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E104B8F91A2EFCBA008EAAC7 /* LogConViewController.xib */; };
+		E11344411A4BB62A003AE262 /* LogHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E11344401A4BB62A003AE262 /* LogHelper.m */; };
+		E1278B6D1A3001390088B681 /* HiLog.m in Sources */ = {isa = PBXBuildFile; fileRef = E1278B6C1A3001390088B681 /* HiLog.m */; };
+		E1AFC4301A25B6B500C06923 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E1AFC42F1A25B6B500C06923 /* AppDelegate.m */; };
+		E1AFC4321A25B6B500C06923 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E1AFC4311A25B6B500C06923 /* main.m */; };
+		E1AFC4351A25B6B500C06923 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1AFC4341A25B6B500C06923 /* ViewController.m */; };
+		E1AFC4371A25B6B500C06923 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1AFC4361A25B6B500C06923 /* Images.xcassets */; };
+		E1AFC43A1A25B6B600C06923 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1AFC4381A25B6B600C06923 /* Main.storyboard */; };
+		E1AFC4461A25B6B600C06923 /* LogCipherToolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E1AFC4451A25B6B600C06923 /* LogCipherToolTests.m */; };
+		E1C0447B1A26C74C0010C78F /* LogHelper+Cipher.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C0447A1A26C74C0010C78F /* LogHelper+Cipher.m */; };
+		E1C0448B1A28190B0010C78F /* FileCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C0448A1A28190B0010C78F /* FileCellView.m */; };
+		E1C0448E1A281CF60010C78F /* DragDropTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C0448D1A281CF60010C78F /* DragDropTableView.m */; };
+		E1F670A41B4FAD3A00C20FC3 /* ExportMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = E1F670A31B4FAD3A00C20FC3 /* ExportMenu.m */; };
+		FCF3420F20AFDFCE009CE785 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCF3420E20AFDFCE009CE785 /* MainViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E1AFC4401A25B6B600C06923 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E1AFC4211A25B6B500C06923 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E1AFC4281A25B6B500C06923;
+			remoteInfo = LogCipherTool;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		08D57E65AB5914A0593D451F /* libPods-LogCipherTool.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LogCipherTool.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		152E5499FE73FBA7175E6119 /* Pods-LogCipherTool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LogCipherTool.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LogCipherTool/Pods-LogCipherTool.debug.xcconfig"; sourceTree = "<group>"; };
+		50969E4F1FFB330C003CCE68 /* ByteAndInt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ByteAndInt.h; sourceTree = "<group>"; };
+		50969E501FFB330C003CCE68 /* ByteAndInt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ByteAndInt.m; sourceTree = "<group>"; };
+		50969E511FFB330C003CCE68 /* ProcessMsgPortCon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProcessMsgPortCon.h; sourceTree = "<group>"; };
+		50969E521FFB330C003CCE68 /* ProcessMsgPortCon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProcessMsgPortCon.m; sourceTree = "<group>"; };
+		50969E531FFB330C003CCE68 /* RC4Cipher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RC4Cipher.h; sourceTree = "<group>"; };
+		50969E541FFB330C003CCE68 /* RC4Cipher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RC4Cipher.m; sourceTree = "<group>"; };
+		50969E551FFB330C003CCE68 /* RegexHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexHelper.h; sourceTree = "<group>"; };
+		50969E561FFB330C003CCE68 /* RegexHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegexHelper.m; sourceTree = "<group>"; };
+		50969E5C1FFB33BB003CCE68 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		C4D4425DC9B96E7B549A0AA1 /* Pods-LogCipherTool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LogCipherTool.release.xcconfig"; path = "Pods/Target Support Files/Pods-LogCipherTool/Pods-LogCipherTool.release.xcconfig"; sourceTree = "<group>"; };
+		D240053C1A639A3A00CC6DF3 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabase.h; path = fmdb/FMDatabase.h; sourceTree = "<group>"; };
+		D240053D1A639A3A00CC6DF3 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabase.m; path = fmdb/FMDatabase.m; sourceTree = "<group>"; };
+		D240053E1A639A3A00CC6DF3 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabaseAdditions.h; path = fmdb/FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		D240053F1A639A3A00CC6DF3 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseAdditions.m; path = fmdb/FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		D24005401A639A3A00CC6DF3 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabasePool.h; path = fmdb/FMDatabasePool.h; sourceTree = "<group>"; };
+		D24005411A639A3A00CC6DF3 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabasePool.m; path = fmdb/FMDatabasePool.m; sourceTree = "<group>"; };
+		D24005421A639A3A00CC6DF3 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabaseQueue.h; path = fmdb/FMDatabaseQueue.h; sourceTree = "<group>"; };
+		D24005431A639A3A00CC6DF3 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseQueue.m; path = fmdb/FMDatabaseQueue.m; sourceTree = "<group>"; };
+		D24005441A639A3A00CC6DF3 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDB.h; path = fmdb/FMDB.h; sourceTree = "<group>"; };
+		D24005451A639A3A00CC6DF3 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMResultSet.h; path = fmdb/FMResultSet.h; sourceTree = "<group>"; };
+		D24005461A639A3A00CC6DF3 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMResultSet.m; path = fmdb/FMResultSet.m; sourceTree = "<group>"; };
+		D240054C1A63A49A00CC6DF3 /* app.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = app.icns; sourceTree = "<group>"; };
+		D27E85EE1A77A4BB0025235C /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		E104B8901A2C3D87008EAAC7 /* DatabaseHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseHelper.h; sourceTree = "<group>"; };
+		E104B8911A2C3D87008EAAC7 /* DatabaseHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseHelper.m; sourceTree = "<group>"; };
+		E104B8EE1A2C4260008EAAC7 /* chatlog@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chatlog@2x.png"; sourceTree = "<group>"; };
+		E104B8F41A2EF531008EAAC7 /* PopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopViewController.h; sourceTree = "<group>"; };
+		E104B8F51A2EF531008EAAC7 /* PopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopViewController.m; sourceTree = "<group>"; };
+		E104B8F71A2EFCBA008EAAC7 /* LogConViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogConViewController.h; sourceTree = "<group>"; };
+		E104B8F81A2EFCBA008EAAC7 /* LogConViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogConViewController.m; sourceTree = "<group>"; };
+		E104B8F91A2EFCBA008EAAC7 /* LogConViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogConViewController.xib; sourceTree = "<group>"; };
+		E113443F1A4BB62A003AE262 /* LogHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogHelper.h; sourceTree = "<group>"; };
+		E11344401A4BB62A003AE262 /* LogHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogHelper.m; sourceTree = "<group>"; };
+		E1278B6B1A3001390088B681 /* HiLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HiLog.h; sourceTree = "<group>"; };
+		E1278B6C1A3001390088B681 /* HiLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HiLog.m; sourceTree = "<group>"; };
+		E1AFC4291A25B6B500C06923 /* LogCipherTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LogCipherTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1AFC42D1A25B6B500C06923 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1AFC42E1A25B6B500C06923 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E1AFC42F1A25B6B500C06923 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E1AFC4311A25B6B500C06923 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E1AFC4331A25B6B500C06923 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		E1AFC4341A25B6B500C06923 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E1AFC4361A25B6B500C06923 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		E1AFC4391A25B6B600C06923 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E1AFC43F1A25B6B600C06923 /* LogCipherToolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LogCipherToolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1AFC4441A25B6B600C06923 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1AFC4451A25B6B600C06923 /* LogCipherToolTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LogCipherToolTests.m; sourceTree = "<group>"; };
+		E1C044791A26C74C0010C78F /* LogHelper+Cipher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LogHelper+Cipher.h"; sourceTree = "<group>"; };
+		E1C0447A1A26C74C0010C78F /* LogHelper+Cipher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LogHelper+Cipher.m"; sourceTree = "<group>"; };
+		E1C044891A28190B0010C78F /* FileCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileCellView.h; sourceTree = "<group>"; };
+		E1C0448A1A28190B0010C78F /* FileCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileCellView.m; sourceTree = "<group>"; };
+		E1C0448C1A281CF60010C78F /* DragDropTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragDropTableView.h; sourceTree = "<group>"; };
+		E1C0448D1A281CF60010C78F /* DragDropTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DragDropTableView.m; sourceTree = "<group>"; };
+		E1F670A21B4FAD3A00C20FC3 /* ExportMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExportMenu.h; sourceTree = "<group>"; };
+		E1F670A31B4FAD3A00C20FC3 /* ExportMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExportMenu.m; sourceTree = "<group>"; };
+		FCF3420D20AFDFCE009CE785 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		FCF3420E20AFDFCE009CE785 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E1AFC4261A25B6B500C06923 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50969E611FFB5D35003CCE68 /* libsqlite3.0.tbd in Frameworks */,
+				8D3D3B52CD43820EBFC6B2BF /* libPods-LogCipherTool.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1AFC43C1A25B6B600C06923 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		50969E5B1FFB33BA003CCE68 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				50969E5C1FFB33BB003CCE68 /* libsqlite3.0.tbd */,
+				08D57E65AB5914A0593D451F /* libPods-LogCipherTool.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C94DB0F5459F242F3D916892 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				152E5499FE73FBA7175E6119 /* Pods-LogCipherTool.debug.xcconfig */,
+				C4D4425DC9B96E7B549A0AA1 /* Pods-LogCipherTool.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D240053B1A639A2600CC6DF3 /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				D240053C1A639A3A00CC6DF3 /* FMDatabase.h */,
+				D240053D1A639A3A00CC6DF3 /* FMDatabase.m */,
+				D240053E1A639A3A00CC6DF3 /* FMDatabaseAdditions.h */,
+				D240053F1A639A3A00CC6DF3 /* FMDatabaseAdditions.m */,
+				D24005401A639A3A00CC6DF3 /* FMDatabasePool.h */,
+				D24005411A639A3A00CC6DF3 /* FMDatabasePool.m */,
+				D24005421A639A3A00CC6DF3 /* FMDatabaseQueue.h */,
+				D24005431A639A3A00CC6DF3 /* FMDatabaseQueue.m */,
+				D24005441A639A3A00CC6DF3 /* FMDB.h */,
+				D24005451A639A3A00CC6DF3 /* FMResultSet.h */,
+				D24005461A639A3A00CC6DF3 /* FMResultSet.m */,
+			);
+			name = fmdb;
+			sourceTree = "<group>";
+		};
+		E104B8ED1A2C422A008EAAC7 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				E104B8EE1A2C4260008EAAC7 /* chatlog@2x.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		E118013F1A25B84B0030F00C /* LogHelper */ = {
+			isa = PBXGroup;
+			children = (
+				E113443F1A4BB62A003AE262 /* LogHelper.h */,
+				E11344401A4BB62A003AE262 /* LogHelper.m */,
+				50969E4F1FFB330C003CCE68 /* ByteAndInt.h */,
+				50969E501FFB330C003CCE68 /* ByteAndInt.m */,
+				50969E511FFB330C003CCE68 /* ProcessMsgPortCon.h */,
+				50969E521FFB330C003CCE68 /* ProcessMsgPortCon.m */,
+				50969E531FFB330C003CCE68 /* RC4Cipher.h */,
+				50969E541FFB330C003CCE68 /* RC4Cipher.m */,
+				50969E551FFB330C003CCE68 /* RegexHelper.h */,
+				50969E561FFB330C003CCE68 /* RegexHelper.m */,
+				E1C044791A26C74C0010C78F /* LogHelper+Cipher.h */,
+				E1C0447A1A26C74C0010C78F /* LogHelper+Cipher.m */,
+				E104B8901A2C3D87008EAAC7 /* DatabaseHelper.h */,
+				E104B8911A2C3D87008EAAC7 /* DatabaseHelper.m */,
+				E1278B6B1A3001390088B681 /* HiLog.h */,
+				E1278B6C1A3001390088B681 /* HiLog.m */,
+				E1F670A21B4FAD3A00C20FC3 /* ExportMenu.h */,
+				E1F670A31B4FAD3A00C20FC3 /* ExportMenu.m */,
+			);
+			path = LogHelper;
+			sourceTree = "<group>";
+		};
+		E1AFC4201A25B6B500C06923 = {
+			isa = PBXGroup;
+			children = (
+				E1AFC42B1A25B6B500C06923 /* LogCipherTool */,
+				E1AFC4421A25B6B600C06923 /* LogCipherToolTests */,
+				E1AFC42A1A25B6B500C06923 /* Products */,
+				50969E5B1FFB33BA003CCE68 /* Frameworks */,
+				C94DB0F5459F242F3D916892 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		E1AFC42A1A25B6B500C06923 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E1AFC4291A25B6B500C06923 /* LogCipherTool.app */,
+				E1AFC43F1A25B6B600C06923 /* LogCipherToolTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E1AFC42B1A25B6B500C06923 /* LogCipherTool */ = {
+			isa = PBXGroup;
+			children = (
+				D240054C1A63A49A00CC6DF3 /* app.icns */,
+				D240053B1A639A2600CC6DF3 /* fmdb */,
+				E104B8ED1A2C422A008EAAC7 /* Images */,
+				E118013F1A25B84B0030F00C /* LogHelper */,
+				E1AFC42E1A25B6B500C06923 /* AppDelegate.h */,
+				E1AFC42F1A25B6B500C06923 /* AppDelegate.m */,
+				E1AFC4331A25B6B500C06923 /* ViewController.h */,
+				E1AFC4341A25B6B500C06923 /* ViewController.m */,
+				FCF3420D20AFDFCE009CE785 /* MainViewController.h */,
+				FCF3420E20AFDFCE009CE785 /* MainViewController.m */,
+				E1C0448C1A281CF60010C78F /* DragDropTableView.h */,
+				E1C0448D1A281CF60010C78F /* DragDropTableView.m */,
+				E1AFC4361A25B6B500C06923 /* Images.xcassets */,
+				E1AFC4381A25B6B600C06923 /* Main.storyboard */,
+				E1AFC42C1A25B6B500C06923 /* Supporting Files */,
+				E1C044891A28190B0010C78F /* FileCellView.h */,
+				E1C0448A1A28190B0010C78F /* FileCellView.m */,
+				E104B8F41A2EF531008EAAC7 /* PopViewController.h */,
+				E104B8F51A2EF531008EAAC7 /* PopViewController.m */,
+				E104B8F71A2EFCBA008EAAC7 /* LogConViewController.h */,
+				E104B8F81A2EFCBA008EAAC7 /* LogConViewController.m */,
+				E104B8F91A2EFCBA008EAAC7 /* LogConViewController.xib */,
+				D27E85EE1A77A4BB0025235C /* MainMenu.xib */,
+			);
+			path = LogCipherTool;
+			sourceTree = "<group>";
+		};
+		E1AFC42C1A25B6B500C06923 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E1AFC42D1A25B6B500C06923 /* Info.plist */,
+				E1AFC4311A25B6B500C06923 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E1AFC4421A25B6B600C06923 /* LogCipherToolTests */ = {
+			isa = PBXGroup;
+			children = (
+				E1AFC4451A25B6B600C06923 /* LogCipherToolTests.m */,
+				E1AFC4431A25B6B600C06923 /* Supporting Files */,
+			);
+			path = LogCipherToolTests;
+			sourceTree = "<group>";
+		};
+		E1AFC4431A25B6B600C06923 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E1AFC4441A25B6B600C06923 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E1AFC4281A25B6B500C06923 /* LogCipherTool */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E1AFC4491A25B6B600C06923 /* Build configuration list for PBXNativeTarget "LogCipherTool" */;
+			buildPhases = (
+				CDCD34799A1B9995F51A8A36 /* [CP] Check Pods Manifest.lock */,
+				E1AFC4251A25B6B500C06923 /* Sources */,
+				E1AFC4261A25B6B500C06923 /* Frameworks */,
+				E1AFC4271A25B6B500C06923 /* Resources */,
+				7ECFAD1CC26A0062DEF3F5CC /* [CP] Embed Pods Frameworks */,
+				428217EA4DE327D5AE4E3C23 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LogCipherTool;
+			productName = LogCipherTool;
+			productReference = E1AFC4291A25B6B500C06923 /* LogCipherTool.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E1AFC43E1A25B6B600C06923 /* LogCipherToolTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E1AFC44C1A25B6B600C06923 /* Build configuration list for PBXNativeTarget "LogCipherToolTests" */;
+			buildPhases = (
+				E1AFC43B1A25B6B600C06923 /* Sources */,
+				E1AFC43C1A25B6B600C06923 /* Frameworks */,
+				E1AFC43D1A25B6B600C06923 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E1AFC4411A25B6B600C06923 /* PBXTargetDependency */,
+			);
+			name = LogCipherToolTests;
+			productName = LogCipherToolTests;
+			productReference = E1AFC43F1A25B6B600C06923 /* LogCipherToolTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E1AFC4211A25B6B500C06923 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = com.baidu;
+				TargetAttributes = {
+					E1AFC4281A25B6B500C06923 = {
+						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = 738UU3Y57V;
+					};
+					E1AFC43E1A25B6B600C06923 = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = E1AFC4281A25B6B500C06923;
+					};
+				};
+			};
+			buildConfigurationList = E1AFC4241A25B6B500C06923 /* Build configuration list for PBXProject "LogCipherTool" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E1AFC4201A25B6B500C06923;
+			productRefGroup = E1AFC42A1A25B6B500C06923 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E1AFC4281A25B6B500C06923 /* LogCipherTool */,
+				E1AFC43E1A25B6B600C06923 /* LogCipherToolTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E1AFC4271A25B6B500C06923 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D240054D1A63A49A00CC6DF3 /* app.icns in Resources */,
+				E104B8EF1A2C4260008EAAC7 /* chatlog@2x.png in Resources */,
+				E1AFC4371A25B6B500C06923 /* Images.xcassets in Resources */,
+				E1AFC43A1A25B6B600C06923 /* Main.storyboard in Resources */,
+				E104B8FB1A2EFCBA008EAAC7 /* LogConViewController.xib in Resources */,
+				D27E85EF1A77A4BB0025235C /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1AFC43D1A25B6B600C06923 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		428217EA4DE327D5AE4E3C23 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LogCipherTool/Pods-LogCipherTool-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7ECFAD1CC26A0062DEF3F5CC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LogCipherTool/Pods-LogCipherTool-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CDCD34799A1B9995F51A8A36 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LogCipherTool-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E1AFC4251A25B6B500C06923 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E104B8921A2C3D87008EAAC7 /* DatabaseHelper.m in Sources */,
+				50969E571FFB330C003CCE68 /* ByteAndInt.m in Sources */,
+				E1278B6D1A3001390088B681 /* HiLog.m in Sources */,
+				E1C0448E1A281CF60010C78F /* DragDropTableView.m in Sources */,
+				50969E5A1FFB330C003CCE68 /* RegexHelper.m in Sources */,
+				D24005481A639A3A00CC6DF3 /* FMDatabaseAdditions.m in Sources */,
+				E104B8F61A2EF531008EAAC7 /* PopViewController.m in Sources */,
+				E1AFC4351A25B6B500C06923 /* ViewController.m in Sources */,
+				E1F670A41B4FAD3A00C20FC3 /* ExportMenu.m in Sources */,
+				E11344411A4BB62A003AE262 /* LogHelper.m in Sources */,
+				50969E581FFB330C003CCE68 /* ProcessMsgPortCon.m in Sources */,
+				FCF3420F20AFDFCE009CE785 /* MainViewController.m in Sources */,
+				D240054A1A639A3A00CC6DF3 /* FMDatabaseQueue.m in Sources */,
+				E1C0447B1A26C74C0010C78F /* LogHelper+Cipher.m in Sources */,
+				E104B8FA1A2EFCBA008EAAC7 /* LogConViewController.m in Sources */,
+				E1AFC4321A25B6B500C06923 /* main.m in Sources */,
+				D240054B1A639A3A00CC6DF3 /* FMResultSet.m in Sources */,
+				50969E591FFB330C003CCE68 /* RC4Cipher.m in Sources */,
+				D24005491A639A3A00CC6DF3 /* FMDatabasePool.m in Sources */,
+				E1AFC4301A25B6B500C06923 /* AppDelegate.m in Sources */,
+				E1C0448B1A28190B0010C78F /* FileCellView.m in Sources */,
+				D24005471A639A3A00CC6DF3 /* FMDatabase.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1AFC43B1A25B6B600C06923 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1AFC4461A25B6B600C06923 /* LogCipherToolTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E1AFC4411A25B6B600C06923 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E1AFC4281A25B6B500C06923 /* LogCipherTool */;
+			targetProxy = E1AFC4401A25B6B600C06923 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E1AFC4381A25B6B600C06923 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E1AFC4391A25B6B600C06923 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E1AFC4471A25B6B600C06923 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		E1AFC4481A25B6B600C06923 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		E1AFC44A1A25B6B600C06923 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 152E5499FE73FBA7175E6119 /* Pods-LogCipherTool.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"SQLITE_HAS_CODEC=1",
+				);
+				INFOPLIST_FILE = LogCipherTool/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = (
+					"-DSQLITE_HAS_CODEC",
+					"-DSQLITE_OS_UNIX=1",
+					"-DSQLITE_TEMP_STORE=2",
+					"-DSQLITE_THREADSAFE",
+					"-DSQLCIPHER_CRYPTO_CC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = macosx10.12;
+			};
+			name = Debug;
+		};
+		E1AFC44B1A25B6B600C06923 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C4D4425DC9B96E7B549A0AA1 /* Pods-LogCipherTool.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_PREPROCESSOR_DEFINITIONS = "SQLITE_HAS_CODEC=1";
+				INFOPLIST_FILE = LogCipherTool/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = (
+					"-DSQLITE_HAS_CODEC",
+					"-DSQLITE_OS_UNIX=1",
+					"-DSQLITE_TEMP_STORE=2",
+					"-DSQLITE_THREADSAFE",
+					"-DSQLCIPHER_CRYPTO_CC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = macosx10.12;
+			};
+			name = Release;
+		};
+		E1AFC44D1A25B6B600C06923 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = LogCipherToolTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LogCipherTool.app/Contents/MacOS/LogCipherTool";
+			};
+			name = Debug;
+		};
+		E1AFC44E1A25B6B600C06923 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = LogCipherToolTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LogCipherTool.app/Contents/MacOS/LogCipherTool";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E1AFC4241A25B6B500C06923 /* Build configuration list for PBXProject "LogCipherTool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1AFC4471A25B6B600C06923 /* Debug */,
+				E1AFC4481A25B6B600C06923 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E1AFC4491A25B6B600C06923 /* Build configuration list for PBXNativeTarget "LogCipherTool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1AFC44A1A25B6B600C06923 /* Debug */,
+				E1AFC44B1A25B6B600C06923 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E1AFC44C1A25B6B600C06923 /* Build configuration list for PBXNativeTarget "LogCipherToolTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1AFC44D1A25B6B600C06923 /* Debug */,
+				E1AFC44E1A25B6B600C06923 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E1AFC4211A25B6B500C06923 /* Project object */;
+}
