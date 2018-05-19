@@ -29,7 +29,6 @@
 		E1278B6D1A3001390088B681 /* HiLog.m in Sources */ = {isa = PBXBuildFile; fileRef = E1278B6C1A3001390088B681 /* HiLog.m */; };
 		E1AFC4301A25B6B500C06923 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E1AFC42F1A25B6B500C06923 /* AppDelegate.m */; };
 		E1AFC4321A25B6B500C06923 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E1AFC4311A25B6B500C06923 /* main.m */; };
-		E1AFC4351A25B6B500C06923 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1AFC4341A25B6B500C06923 /* ViewController.m */; };
 		E1AFC4371A25B6B500C06923 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1AFC4361A25B6B500C06923 /* Images.xcassets */; };
 		E1AFC43A1A25B6B600C06923 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1AFC4381A25B6B600C06923 /* Main.storyboard */; };
 		E1AFC4461A25B6B600C06923 /* LogCipherToolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E1AFC4451A25B6B600C06923 /* LogCipherToolTests.m */; };
@@ -38,6 +37,7 @@
 		E1C0448E1A281CF60010C78F /* DragDropTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C0448D1A281CF60010C78F /* DragDropTableView.m */; };
 		E1F670A41B4FAD3A00C20FC3 /* ExportMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = E1F670A31B4FAD3A00C20FC3 /* ExportMenu.m */; };
 		FCF3420F20AFDFCE009CE785 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCF3420E20AFDFCE009CE785 /* MainViewController.m */; };
+		FCF3421520B035D7009CE785 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCF3421420B035D7009CE785 /* ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,8 +93,6 @@
 		E1AFC42E1A25B6B500C06923 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E1AFC42F1A25B6B500C06923 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E1AFC4311A25B6B500C06923 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		E1AFC4331A25B6B500C06923 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E1AFC4341A25B6B500C06923 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		E1AFC4361A25B6B500C06923 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E1AFC4391A25B6B600C06923 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E1AFC43F1A25B6B600C06923 /* LogCipherToolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LogCipherToolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,6 +108,8 @@
 		E1F670A31B4FAD3A00C20FC3 /* ExportMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExportMenu.m; sourceTree = "<group>"; };
 		FCF3420D20AFDFCE009CE785 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		FCF3420E20AFDFCE009CE785 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		FCF3421320B035D7009CE785 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		FCF3421420B035D7009CE785 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,16 +224,14 @@
 		E1AFC42B1A25B6B500C06923 /* LogCipherTool */ = {
 			isa = PBXGroup;
 			children = (
+				FCF3421320B035D7009CE785 /* ViewController.h */,
+				FCF3421420B035D7009CE785 /* ViewController.m */,
 				D240054C1A63A49A00CC6DF3 /* app.icns */,
 				D240053B1A639A2600CC6DF3 /* fmdb */,
 				E104B8ED1A2C422A008EAAC7 /* Images */,
 				E118013F1A25B84B0030F00C /* LogHelper */,
 				E1AFC42E1A25B6B500C06923 /* AppDelegate.h */,
 				E1AFC42F1A25B6B500C06923 /* AppDelegate.m */,
-				E1AFC4331A25B6B500C06923 /* ViewController.h */,
-				E1AFC4341A25B6B500C06923 /* ViewController.m */,
-				FCF3420D20AFDFCE009CE785 /* MainViewController.h */,
-				FCF3420E20AFDFCE009CE785 /* MainViewController.m */,
 				E1C0448C1A281CF60010C78F /* DragDropTableView.h */,
 				E1C0448D1A281CF60010C78F /* DragDropTableView.m */,
 				E1AFC4361A25B6B500C06923 /* Images.xcassets */,
@@ -247,6 +245,8 @@
 				E104B8F81A2EFCBA008EAAC7 /* LogConViewController.m */,
 				E104B8F91A2EFCBA008EAAC7 /* LogConViewController.xib */,
 				D27E85EE1A77A4BB0025235C /* MainMenu.xib */,
+				FCF3420D20AFDFCE009CE785 /* MainViewController.h */,
+				FCF3420E20AFDFCE009CE785 /* MainViewController.m */,
 			);
 			path = LogCipherTool;
 			sourceTree = "<group>";
@@ -442,7 +442,6 @@
 				50969E5A1FFB330C003CCE68 /* RegexHelper.m in Sources */,
 				D24005481A639A3A00CC6DF3 /* FMDatabaseAdditions.m in Sources */,
 				E104B8F61A2EF531008EAAC7 /* PopViewController.m in Sources */,
-				E1AFC4351A25B6B500C06923 /* ViewController.m in Sources */,
 				E1F670A41B4FAD3A00C20FC3 /* ExportMenu.m in Sources */,
 				E11344411A4BB62A003AE262 /* LogHelper.m in Sources */,
 				50969E581FFB330C003CCE68 /* ProcessMsgPortCon.m in Sources */,
@@ -452,6 +451,7 @@
 				E104B8FA1A2EFCBA008EAAC7 /* LogConViewController.m in Sources */,
 				E1AFC4321A25B6B500C06923 /* main.m in Sources */,
 				D240054B1A639A3A00CC6DF3 /* FMResultSet.m in Sources */,
+				FCF3421520B035D7009CE785 /* ViewController.m in Sources */,
 				50969E591FFB330C003CCE68 /* RC4Cipher.m in Sources */,
 				D24005491A639A3A00CC6DF3 /* FMDatabasePool.m in Sources */,
 				E1AFC4301A25B6B500C06923 /* AppDelegate.m in Sources */,
