@@ -24,6 +24,7 @@
 
 @property (strong,nonatomic) IBOutlet NSTextView * logView;
 @property (strong,nonatomic) IBOutlet DragDropTableView  * logTableView;
+
 @property (strong,nonatomic) NSArray * logList;
 @property (strong,nonatomic) NSMutableArray * logLevelItems;
 //@property (strong,nonatomic) NSString * logContent;
@@ -50,9 +51,14 @@
 @property (assign,nonatomic)  BOOL  isInSearchMode;
 
 @property (strong) IBOutlet NSTextView * logContentView;
+
+@property (strong) IBOutlet DragDropTableView *fileListTableView;
+
 @property (strong) NSString * logContent;
 
 -(void)setlogText:(NSString*)text;
+
+@property (nonatomic, strong) NSArray *filePathList; //文件列表个数
 
 @end
 

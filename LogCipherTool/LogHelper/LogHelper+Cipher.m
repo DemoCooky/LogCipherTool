@@ -177,7 +177,7 @@
 
 +(void)readDataInPortEndListening
 {
-    [[ProcessMsgPortCon sharedInstance]endLisening];
+    [[ProcessMsgPortCon sharedInstance] endLisening];
  }
 
 +(int)getFileSize:(NSString*)filePath{

@@ -38,6 +38,8 @@
 		E1F670A41B4FAD3A00C20FC3 /* ExportMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = E1F670A31B4FAD3A00C20FC3 /* ExportMenu.m */; };
 		FCF3420F20AFDFCE009CE785 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCF3420E20AFDFCE009CE785 /* MainViewController.m */; };
 		FCF3421520B035D7009CE785 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCF3421420B035D7009CE785 /* ViewController.m */; };
+		FCF3421B20B03E50009CE785 /* HiLogProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF3421A20B03E50009CE785 /* HiLogProcessor.swift */; };
+		FCF3421D20B03EB9009CE785 /* ShellOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF3421C20B03EB9009CE785 /* ShellOut.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +112,9 @@
 		FCF3420E20AFDFCE009CE785 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		FCF3421320B035D7009CE785 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		FCF3421420B035D7009CE785 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FCF3421920B03E4E009CE785 /* LogCipherTool-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LogCipherTool-Bridging-Header.h"; sourceTree = "<group>"; };
+		FCF3421A20B03E50009CE785 /* HiLogProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HiLogProcessor.swift; sourceTree = "<group>"; };
+		FCF3421C20B03EB9009CE785 /* ShellOut.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShellOut.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,8 +229,6 @@
 		E1AFC42B1A25B6B500C06923 /* LogCipherTool */ = {
 			isa = PBXGroup;
 			children = (
-				FCF3421320B035D7009CE785 /* ViewController.h */,
-				FCF3421420B035D7009CE785 /* ViewController.m */,
 				D240054C1A63A49A00CC6DF3 /* app.icns */,
 				D240053B1A639A2600CC6DF3 /* fmdb */,
 				E104B8ED1A2C422A008EAAC7 /* Images */,
@@ -245,8 +248,13 @@
 				E104B8F81A2EFCBA008EAAC7 /* LogConViewController.m */,
 				E104B8F91A2EFCBA008EAAC7 /* LogConViewController.xib */,
 				D27E85EE1A77A4BB0025235C /* MainMenu.xib */,
+				FCF3421320B035D7009CE785 /* ViewController.h */,
+				FCF3421420B035D7009CE785 /* ViewController.m */,
 				FCF3420D20AFDFCE009CE785 /* MainViewController.h */,
 				FCF3420E20AFDFCE009CE785 /* MainViewController.m */,
+				FCF3421A20B03E50009CE785 /* HiLogProcessor.swift */,
+				FCF3421C20B03EB9009CE785 /* ShellOut.swift */,
+				FCF3421920B03E4E009CE785 /* LogCipherTool-Bridging-Header.h */,
 			);
 			path = LogCipherTool;
 			sourceTree = "<group>";
@@ -330,6 +338,7 @@
 					E1AFC4281A25B6B500C06923 = {
 						CreatedOnToolsVersion = 6.1;
 						DevelopmentTeam = 738UU3Y57V;
+						LastSwiftMigration = 0930;
 					};
 					E1AFC43E1A25B6B600C06923 = {
 						CreatedOnToolsVersion = 6.1;
@@ -436,11 +445,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E104B8921A2C3D87008EAAC7 /* DatabaseHelper.m in Sources */,
+				FCF3421D20B03EB9009CE785 /* ShellOut.swift in Sources */,
 				50969E571FFB330C003CCE68 /* ByteAndInt.m in Sources */,
 				E1278B6D1A3001390088B681 /* HiLog.m in Sources */,
 				E1C0448E1A281CF60010C78F /* DragDropTableView.m in Sources */,
 				50969E5A1FFB330C003CCE68 /* RegexHelper.m in Sources */,
 				D24005481A639A3A00CC6DF3 /* FMDatabaseAdditions.m in Sources */,
+				FCF3421B20B03E50009CE785 /* HiLogProcessor.swift in Sources */,
 				E104B8F61A2EF531008EAAC7 /* PopViewController.m in Sources */,
 				E1F670A41B4FAD3A00C20FC3 /* ExportMenu.m in Sources */,
 				E11344411A4BB62A003AE262 /* LogHelper.m in Sources */,
@@ -570,8 +581,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 152E5499FE73FBA7175E6119 /* Pods-LogCipherTool.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -587,9 +600,13 @@
 					"-DSQLITE_THREADSAFE",
 					"-DSQLCIPHER_CRYPTO_CC",
 				);
+				PRODUCT_MODULE_NAME = LogCipherTool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = macosx10.12;
+				SWIFT_OBJC_BRIDGING_HEADER = "LogCipherTool/LogCipherTool-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -597,8 +614,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C4D4425DC9B96E7B549A0AA1 /* Pods-LogCipherTool.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_PREPROCESSOR_DEFINITIONS = "SQLITE_HAS_CODEC=1";
 				INFOPLIST_FILE = LogCipherTool/Info.plist;
@@ -611,15 +630,19 @@
 					"-DSQLITE_THREADSAFE",
 					"-DSQLCIPHER_CRYPTO_CC",
 				);
+				PRODUCT_MODULE_NAME = LogCipherTool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = macosx10.12;
+				SWIFT_OBJC_BRIDGING_HEADER = "LogCipherTool/LogCipherTool-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		E1AFC44D1A25B6B600C06923 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -640,6 +663,7 @@
 		E1AFC44E1A25B6B600C06923 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (

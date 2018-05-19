@@ -16,7 +16,7 @@
 #import "DragDropTableView.h"
 #import "ProcessMsgPortCon.h"
 #import "ExportMenu.h"
-
+#import "LogCipherTool-Swift.h"
 
 @implementation ViewController
 
@@ -54,6 +54,16 @@
     self.done = YES;
 
     [self.logTableView setMenu:[[ExportMenu alloc]initWithDelegate:self]];
+    [self.fileListTableView setMenu:[[ExportMenu alloc]initWithDelegate:self]];
+    
+    self.fileListTableView.dragFilesBlock = ^(NSArray * fileList){
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        NSURL *url = [NSURL URLWithString:fileList[0]];
+        NSArray *filePathList = [HiLogProcessor processorAt:url];
+        
+        strongSelf.filePathList = filePathList;
+        [((ViewController *)strongSelf).fileListTableView reloadData];
+    };
     // 拖拽文件到列表
     self.logTableView.dragFilesBlock = ^(NSArray * fileList){
         __strong typeof(weakSelf) strongSelf = weakSelf;
@@ -82,8 +92,9 @@
             [alert setAlertStyle:NSWarningAlertStyle];
             [alert runModal];
         }
-        
     };
+    
+    //
     
     
 }
@@ -111,7 +122,10 @@
     [indicator startAnimation:nil];
     
     
-    [alert beginSheetModalForWindow:[self.view window] modalDelegate:self didEndSelector:@selector(cancel:) contextInfo:nil];
+//    [alert beginSheetModalForWindow:[self.view window] modalDelegate:self didEndSelector:@selector(cancel:) contextInfo:nil];
+    [alert beginSheetModalForWindow:[self.logTableView window] completionHandler:^(NSModalResponse returnCode) {
+        
+    }];
     
     if (filePath == nil || filePath.length == 0){
         return;
@@ -157,7 +171,11 @@
 
 - (NSInteger) numberOfRowsInTableView:(NSTableView *)tableView
 {
-    return   self.logList.count;
+    if (tableView == self.fileListTableView) {
+        return self.filePathList.count;
+    }else {
+        return self.logList.count;
+    }
 }
 
 - (CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)row
@@ -167,49 +185,65 @@
 
 -(NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
 {
-    NSString *identifer = [tableColumn identifier];
     NSTableCellView *cellView = nil;
-    //    NSLog(@" self.logList : %ld---- row %ld ",self.logList.count,(long)row);
-    if (row >self.logList.count) {
-        return  cellView;
-    }
-    HiLog * hiLog = [self.logList objectAtIndex:row];
+    NSString *identifer = [tableColumn identifier];
     
-    if ([identifer isEqualToString:@"logid"]) {
-        cellView = [tableView makeViewWithIdentifier:@"logidrow" owner:self];
-        cellView.textField.stringValue = [NSString stringWithFormat:@"%d",hiLog.ID]?[NSString stringWithFormat:@"%d",hiLog.ID]:@"null";
-    } else  if ([identifer isEqualToString:@"logtime"]) {
-        cellView = [tableView makeViewWithIdentifier:@"logtimerow" owner:self];
-        cellView.textField.stringValue = hiLog.logTime ? hiLog.logTime :@"null";
-    } else if ([identifer isEqualToString:@"loglevel"]) {
-        cellView = [tableView makeViewWithIdentifier:@"loglevelrow" owner:self];
-        cellView.textField.stringValue = hiLog.logLevel ? hiLog.logLevel :@"null";
-    }  else if ([identifer isEqualToString:@"logtype"]) {
-        cellView = [tableView makeViewWithIdentifier:@"logtyperow" owner:self];
-        cellView.textField.stringValue = hiLog.logType ? hiLog.logType :@"null";
-    } else if ([identifer isEqualToString:@"threadname"]) {
-        cellView = [tableView makeViewWithIdentifier:@"threadnamerow" owner:self];
-        cellView.textField.stringValue = hiLog.threadName ? hiLog.threadName :@"null";
-    } else if ([identifer isEqualToString:@"logcontent"]) {
-        cellView = [tableView makeViewWithIdentifier:@"logcontentrow" owner:self];
-        cellView.textField.stringValue = hiLog.logContent ? hiLog.logContent :@"null";
+    if (tableView == self.logTableView) {
+        
+        //    NSLog(@" self.logList : %ld---- row %ld ",self.logList.count,(long)row);
+        if (row >self.logList.count) {
+            return  cellView;
+        }
+        HiLog * hiLog = [self.logList objectAtIndex:row];
+        
+        if ([identifer isEqualToString:@"logid"]) {
+            cellView = [tableView makeViewWithIdentifier:@"logidrow" owner:self];
+            cellView.textField.stringValue = [NSString stringWithFormat:@"%d",hiLog.ID]?[NSString stringWithFormat:@"%d",hiLog.ID]:@"null";
+        } else  if ([identifer isEqualToString:@"logtime"]) {
+            cellView = [tableView makeViewWithIdentifier:@"logtimerow" owner:self];
+            cellView.textField.stringValue = hiLog.logTime ? hiLog.logTime :@"null";
+        } else if ([identifer isEqualToString:@"loglevel"]) {
+            cellView = [tableView makeViewWithIdentifier:@"loglevelrow" owner:self];
+            cellView.textField.stringValue = hiLog.logLevel ? hiLog.logLevel :@"null";
+        }  else if ([identifer isEqualToString:@"logtype"]) {
+            cellView = [tableView makeViewWithIdentifier:@"logtyperow" owner:self];
+            cellView.textField.stringValue = hiLog.logType ? hiLog.logType :@"null";
+        } else if ([identifer isEqualToString:@"threadname"]) {
+            cellView = [tableView makeViewWithIdentifier:@"threadnamerow" owner:self];
+            cellView.textField.stringValue = hiLog.threadName ? hiLog.threadName :@"null";
+        } else if ([identifer isEqualToString:@"logcontent"]) {
+            cellView = [tableView makeViewWithIdentifier:@"logcontentrow" owner:self];
+            cellView.textField.stringValue = hiLog.logContent ? hiLog.logContent :@"null";
+        }
+    }else {
+        if (row >self.filePathList.count) {
+            return  cellView;
+        }
+        if ([identifer isEqualToString:@"filelist"]) {
+            cellView = [tableView makeViewWithIdentifier:@"filelistrow" owner:self];
+            NSString *filePath = [self.filePathList objectAtIndex:row];
+            NSString *fileName = [[NSURL fileURLWithPath:filePath] lastPathComponent];
+            cellView.textField.stringValue = fileName.length>0 ? fileName :@"null";
+        }
     }
     return cellView;
-    
+
 }
 
 -(id)tableView:(NSTableView *)tableView objectValueForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row{
-    
-    id obj = (self.logList)[row];
-    if (obj == nil)
-        return nil;
-    
-    if (![obj isKindOfClass:[NSDictionary class]])
-        return obj;
-    
-    id v = ((NSDictionary *) obj)[[tableColumn identifier]];
-    if (v == [NSNull null]) return @"";
-    return v;
+    if (tableView == _logTableView) {
+        id obj = (self.logList)[row];
+        if (obj == nil)
+            return nil;
+        
+        if (![obj isKindOfClass:[NSDictionary class]])
+            return obj;
+        
+        id v = ((NSDictionary *) obj)[[tableColumn identifier]];
+        if (v == [NSNull null]) return @"";
+        return v;
+    }
+    return @"";
 }
 
 -(void)tableView:(NSTableView *)tableView mouseDownInHeaderOfTableColumn:(NSTableColumn *)tableColumn {
@@ -223,20 +257,41 @@
 //}
 -(BOOL)tableView:(NSTableView *)tableView shouldSelectRow:(NSInteger)row
 {
-    
-    if (self.logList.count > row) {
-        NSDictionary * dic = [self.logList objectAtIndex:row];
-        
-        NSString * logTime =  [dic valueForKey:@"logTime"];
-        NSString * logLevel = [dic valueForKey:@"logLevel"];
-        NSString * logContent = [dic valueForKey:@"logContent"];
-        NSString * logType = [dic valueForKey:@"logType"];
-        NSString * threadName = [dic valueForKey:@"threadName"];
-        
-        [self createPopover:[NSString stringWithFormat:@"\n时间:%@ \n级别:%@ \n任务:%@ \n线程:%@ \n内容:%@\n",logTime,logLevel,logType,threadName,logContent]];
-        NSRect rec = [tableView rectOfRow:row];
-        [self.detailPopover showRelativeToRect:rec ofView:tableView preferredEdge:NSMinYEdge];
-        
+    if (tableView == self.logTableView) {
+        if (self.logList.count > row) {
+            NSDictionary * dic = [self.logList objectAtIndex:row];
+            
+            NSString * logTime =  [dic valueForKey:@"logTime"];
+            NSString * logLevel = [dic valueForKey:@"logLevel"];
+            NSString * logContent = [dic valueForKey:@"logContent"];
+            NSString * logType = [dic valueForKey:@"logType"];
+            NSString * threadName = [dic valueForKey:@"threadName"];
+            
+            [self createPopover:[NSString stringWithFormat:@"\n时间:%@ \n级别:%@ \n任务:%@ \n线程:%@ \n内容:%@\n",logTime,logLevel,logType,threadName,logContent]];
+            NSRect rec = [tableView rectOfRow:row];
+            [self.detailPopover showRelativeToRect:rec ofView:tableView preferredEdge:NSMinYEdge];
+        }
+    }else {
+       if (self.filePathList.count > row) {
+           NSString *filePath = [self.filePathList objectAtIndex:row];
+           if ([[[filePath pathExtension] lowercaseString] isEqualTo:@"log"]) {
+               
+               [LogHelper readDataInPortEndListening];
+               self.isImLog = NO;
+               [self.imLogBtn setTitle:@"实时log"];
+               [self tableViewRelaod:[NSMutableArray array] strongSelf:self];
+               [self loadLogDataIFile:filePath];
+               
+           }else{
+               
+               NSAlert *alert = [[NSAlert alloc] init];
+               [alert addButtonWithTitle:@"OK"];
+               [alert setMessageText:@"文件类型错误"];
+               [alert setInformativeText:@"请选择正确的文件"];
+               [alert setAlertStyle:NSWarningAlertStyle];
+               [alert runModal];
+           }
+       }
     }
     
     return YES;
@@ -268,7 +323,8 @@
                                               isDirectory:YES]];
     __weak typeof(self) weakSelf = self;
     
-    [openFilePanel beginSheetModalForWindow:self.view.window completionHandler:^(NSInteger result) {
+    
+    [openFilePanel beginSheetModalForWindow:self.logTableView.window completionHandler:^(NSInteger result) {
         __strong typeof(self) strongSelf = weakSelf;
         
         if (result == NSModalResponseOK) {
@@ -486,7 +542,7 @@
     
     __weak typeof(self) weakSelf = self;
     
-    [panel beginSheetModalForWindow:self.view.window completionHandler:^(NSInteger result){
+    [panel beginSheetModalForWindow:self.logTableView.window completionHandler:^(NSInteger result){
         __strong typeof(weakSelf) strongSelf = weakSelf;
         
         if (result == NSFileHandlingPanelOKButton)
