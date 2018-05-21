@@ -56,13 +56,24 @@
     [self.logTableView setMenu:[[ExportMenu alloc]initWithDelegate:self]];
     [self.fileListTableView setMenu:[[ExportMenu alloc]initWithDelegate:self]];
     
+    // 拖拽文件夹到列表
     self.fileListTableView.dragFilesBlock = ^(NSArray * fileList){
         __strong typeof(weakSelf) strongSelf = weakSelf;
         NSURL *url = [NSURL URLWithString:fileList[0]];
-        NSArray *filePathList = [HiLogProcessor processorAt:url];
         
-        strongSelf.filePathList = filePathList;
-        [((ViewController *)strongSelf).fileListTableView reloadData];
+        if ([[[url.absoluteString pathExtension] lowercaseString] isEqualTo:@"tar"]) {
+            NSArray *filePathList = [HiLogProcessor processorAt:url];
+            
+            strongSelf.filePathList = filePathList;
+            [((ViewController *)strongSelf).fileListTableView reloadData];
+        }else {
+            NSAlert *alert = [[NSAlert alloc] init];
+            [alert addButtonWithTitle:@"OK"];
+            [alert setMessageText:@"文件类型错误"];
+            [alert setInformativeText:@"仅支持.tar 请选择正确的文件"];
+            [alert setAlertStyle:NSWarningAlertStyle];
+            [alert runModal];
+        }
     };
     // 拖拽文件到列表
     self.logTableView.dragFilesBlock = ^(NSArray * fileList){
