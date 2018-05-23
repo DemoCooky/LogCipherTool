@@ -34,6 +34,7 @@ class HiLogProcessor:NSObject {
         }
         
         let fileManager = FileManager.default
+        fileManager.changeCurrentDirectoryPath(url.deletingLastPathComponent().absoluteString)
         
         // url: file:///Users/wangbo/Downloads/8145191757677-16.tar
         let newDir = url.deletingPathExtension().lastPathComponent
