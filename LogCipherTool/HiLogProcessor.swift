@@ -68,8 +68,10 @@ class HiLogProcessor:NSObject {
                 }
             }
         }
-
-        return filePathArray;
+        
+        return filePathArray.sorted {
+            return $0 < $1
+        }
     }
     
     class func decode(at path: String) {
